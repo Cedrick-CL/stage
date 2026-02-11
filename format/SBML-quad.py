@@ -23,7 +23,7 @@ def formuleLogic(model, var0):
     
     return " || ".join(orClauses)
 
-def modelToSbmlQual(model, outputFile="./output_model.sbml"):
+def modelToSbmlQual(model, outputFile="sbml"):
     doc = libsbml.SBMLDocument(3, 1)
     doc.enablePackage("http://www.sbml.org/sbml/level3/version1/qual/version1", "qual", True)
 
@@ -61,4 +61,5 @@ def modelToSbmlQual(model, outputFile="./output_model.sbml"):
         default_term = transition.createDefaultTerm()
         default_term.setResultLevel(0)
 
-    libsbml.writeSBMLToFile(doc, outputFile)
+    libsbml.writeSBMLToFile(doc, f'{outputFile}.sbml')
+
