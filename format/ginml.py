@@ -1,21 +1,6 @@
-import pylfit
-data = [ \
-(["0","0","0"],["0","0","1"]), \
-(["1","0","0"],["0","0","0"]), \
-(["0","1","0"],["1","0","1"]), \
-(["0","0","1"],["0","0","1"]), \
-(["1","1","0"],["1","0","0"]), \
-(["1","0","1"],["0","1","0"]), \
-(["0","1","1"],["1","0","1"]), \
-(["1","1","1"],["1","1","0"])]
-
-dataset = pylfit.preprocessing.discrete_state_transitions_dataset_from_array(data=data, feature_names=["p_t_1","q_t_1","r_t_1"], target_names=["p_t","q_t","r_t"])
-
-model = pylfit.models.DMVLP(features=dataset.features, targets=dataset.targets)
-model.compile(algorithm="pride") 
-
-model.fit(dataset=dataset)
+import
 from random import randint
+
 # Fonctionne que pour états booléen 
 def modelToGinsim(model, outputFile = "./ginsim"):
     variablesAndMax = [(i[0][:-4], i[1][-1]) for i in model.features]
@@ -73,3 +58,4 @@ def modelToGinsim(model, outputFile = "./ginsim"):
         f.write(f'{edge}\n\t</graph>\n</gxl>')
 
 modelToGinsim(model)
+
