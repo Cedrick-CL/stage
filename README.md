@@ -5,6 +5,7 @@
 - [Organisation](#organisation)
 - [Utilisation](#utilisation)
 - [Fonctionnement et limites](#fonctionnement-et-limites)
+- [Conclusion](#conclusion)
 - [Bibliographie](#bibliographie)
 
 ## Description
@@ -120,6 +121,13 @@ L'algorithme de traduction dans ce format s'appuie donc sur l'algorithme utilsé
 Il est possible de vérifier le fichier de sortie associé à notre exemple dans le dossier `Exemple/dataREADme`.
 
 L'implémentation pour ce format supporte aussi bien les variables booléennes que multi-valuées.
+
+## Conclusion
+
+Pour un modèle avec que des variables booléenes, on va retrouver les mêmes graphes de transitions pour les formats PyBoolnet et SBML-quad.
+On aura des différences entre ces deux formats dans le cas multi-valués.
+
+Le format Ginml, quant à lui, présente toujours des différences.
 
 ## Bibliographie
 
