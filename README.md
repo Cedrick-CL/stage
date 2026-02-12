@@ -1,1 +1,1 @@
-# Export de modèle dans différents formats
+# Export d'un modèle dans différents formats
