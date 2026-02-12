@@ -142,7 +142,7 @@ Le format Ginml, quant à lui, présente toujours des différences.
 * **Pint** : [Spécifications du format](https://loicpauleve.name/pint/doc/automata-networks.html)
 
 ### Articles et Publications
-* **Naldi, A., et al. (2010)**. *GINsim: a software suite for the modeling and simulation of gene regulatory networks*. Bioinformatics, 26(10), 1378–1379. [DOI: 10.1093/bioinformatics/btq129](https://academic.oup.com/bioinformatics/article/26/10/1378/193238)
+* **Naldi, A., et al. (2010)**. *GINsim: a software suite for the modeling and simulation of gene regulatory networks*. Bioinformatics, 26(10), 1378–1379. [Site](https://academic.oup.com/bioinformatics/article/26/10/1378/193238)
 * **Folschette, M., et al. (2015)**. *Inference of Boolean networks from time series of gene expression*. [PDF](http://maxime.folschette.fr/Folschette_TCS15.pdf)
 * **Ribeiro, T., et al. (2021)**. *Learning Logic Programs for Modeling Gene Regulatory Networks*. [PDF](http://maxime.folschette.fr/Ribeiro_ML21.pdf)
 * **Richard, A., Comet, J.-P., & Bernot, G. (2008)**. *Formal Methods for Modeling Biological Regulatory Networks*. [Notes de cours (Lille)](https://webusers.i3s.unice.fr/~bernot/Teaching/2008-LilleSchool-RichardCometBernot.pdf)
