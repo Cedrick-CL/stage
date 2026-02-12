@@ -31,7 +31,7 @@ def modelToGinml(model, outputFile = "ginml"):
                             if name == "":
                                 name = f'\t\t\t\t<exp str="!{condition.variable[:-4]}'
                             else:
-                                name += f' &amp !{condition.variable[:-4]}'
+                                name += f' &amp; !{condition.variable[:-4]}'
                                 put = True
                         else:
                             if f'from="{var}" to="{condition.variable[:-4]}" sign="positive"' not in edge:

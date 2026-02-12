@@ -44,7 +44,6 @@ def modelToSbmlQual(model, outputFile="./output_model.sbml"):
         output.setTransitionEffect(libsbml.OUTPUT_TRANSITION_EFFECT_ASSIGNMENT_LEVEL)
 
         logic_str = formuleLogic(model, name)
-        print(logic_str)
 
         for input_name, _ in variables_info:
             if input_name in logic_str and input_name != name:

@@ -16,13 +16,13 @@ def modelToPint(model, outputName = "./pintfile"):
                 for etat in etats:
                     if (etat != rules.head.value):
                         f.write(f'"{rules.head.variable[:-2]}" "{etat}" -> "{rules.head.value}"')
+                        nbrCond = 0
                         for condition in range(lenBodyValues):
-                            if condition == 0:
+                            if nbrCond == 0:
                                 f.write(f' when "{listBodyValues[condition].variable[:-4]}"="{listBodyValues[condition].value}"')
+                                nbrCond += 1
                             else: 
-                                f.write(f'"{listBodyValues[condition].variable[:-4]}"="{listBodyValues[condition].value}"')
-                            if condition < lenBodyValues - 1:
-                                f.write(" and ")
+                                f.write(f' and "{listBodyValues[condition].variable[:-4]}"="{listBodyValues[condition].value}"')
                         f.write("\n")    
             
             else:
@@ -32,13 +32,13 @@ def modelToPint(model, outputName = "./pintfile"):
                         f.write(f'"{rules.head.variable[:-2]}" "{nextValue}" -> "{rules.head.value}"\n')
                     else:
                         f.write(f'"{rules.head.variable[:-2]}" "{nextValue}" -> "{rules.head.value}"')
+                        nbrCond = 0
                         for condition in range(lenBodyValues):
                             currentVar = listBodyValues[condition].variable[:-4]
                             if (currentVar != headVariable):
-                                if condition == 0:
+                                if nbrCond == 0:
                                     f.write(f' when "{listBodyValues[condition].variable[:-4]}"="{listBodyValues[condition].value}"')
+                                    nbrCond += 1
                                 else:
-                                    f.write(f'"{listBodyValues[condition].variable[:-4]}"="{listBodyValues[condition].value}"')
-                                if condition < lenBodyValues - 1:
-                                    f.write(" and ")
+                                    f.write(f' and "{listBodyValues[condition].variable[:-4]}"="{listBodyValues[condition].value}"')
                         f.write("\n")
