@@ -2,8 +2,10 @@
 
 ## Table des matières
 - [Description](#description)
+- [Organisation](#organisation)
 - [Utilisation](#utilisation)
 - [Fonctionnement et limites](#fonctionnement-et-limites)
+- [Bibliographie](#bibliographie)
 
 ## Description
 LFIT (Ribeiro et al., Machine Learning, 2021) est une méthode d'apprentissage automatique (machine learning) symbolique et explicable. À partir de traces d'exécution discrètes, elle produit un programme logique représentant exactement ces observations, permettant de retrouver la structure dynamique modulaire du système. Ce programme logique peut être utilisé pour reproduire les observations.
@@ -11,6 +13,12 @@ LFIT (Ribeiro et al., Machine Learning, 2021) est une méthode d'apprentissage a
 Il est connu que le programme logique est équivalent à un automate asynchrone (Folschette et al, CS2Bio, 2013). L'objectif de ce stage est d'implémenter cette traduction.
 
 À l'issue de celui-ci, une traduction dans les formats Pint, Ginml, PyBoolnet et SBML-qaud a été réalisée.
+
+## Organisation
+
+Vous trouverez dans le dossier `Format` les différentes fonctions de traduction dans les différents formats décrits plus bas. 
+
+Dans le dossier `Exemples`, différents applications des algorithmes et enfin un dernier fichier `readGraphe.py` qui gère la lecture des fichiers `.dot`.
 
 ## Utilisation
 
@@ -112,3 +120,21 @@ L'algorithme de traduction dans ce format s'appuie donc sur l'algorithme utilsé
 Il est possible de vérifier le fichier de sortie associé à notre exemple dans le dossier `Exemple/dataREADme`.
 
 L'implémentation pour ce format supporte aussi bien les variables booléennes que multi-valuées.
+
+## Bibliographie
+
+### Logiciels et Bibliothèques
+* **GINsim** : [Documentation officielle](https://ginsim.github.io/documentation/)
+* **libSBML** : [Dépôt GitHub](https://github.com/sbmlteam/libsbml), [Page Wikipedia](https://en.wikipedia.org/wiki/LibSBML) et [Documentation API Python (SBasePlugin)](https://sbml.org/software/libsbml/5.18.0/docs/formatted/python-api/classlibsbml_1_1_s_base_plugin.html)
+* **pylfit** : [Dépôt GitHub (Tony-sama)](https://github.com/Tony-sama/pylfit)
+
+### Formats de fichiers
+* **GINML** : [Spécifications du format](https://colomoto.github.io/formats/ginml/)
+* **SBML-qual** : [Spécifications du format](https://colomoto.github.io/formats/sbml-qual/)
+* **Pint** : [Spécifications du format](https://loicpauleve.name/pint/doc/automata-networks.html)
+
+### Articles et Publications
+* **Naldi, A., et al. (2010)**. *GINsim: a software suite for the modeling and simulation of gene regulatory networks*. Bioinformatics, 26(10), 1378–1379. [DOI: 10.1093/bioinformatics/btq129](https://academic.oup.com/bioinformatics/article/26/10/1378/193238)
+* **Folschette, M., et al. (2015)**. *Inference of Boolean networks from time series of gene expression*. [PDF](http://maxime.folschette.fr/Folschette_TCS15.pdf)
+* **Ribeiro, T., et al. (2021)**. *Learning Logic Programs for Modeling Gene Regulatory Networks*. [PDF](http://maxime.folschette.fr/Ribeiro_ML21.pdf)
+* **Richard, A., Comet, J.-P., & Bernot, G. (2008)**. *Formal Methods for Modeling Biological Regulatory Networks*. [Notes de cours (Lille)](https://webusers.i3s.unice.fr/~bernot/Teaching/2008-LilleSchool-RichardCometBernot.pdf)
