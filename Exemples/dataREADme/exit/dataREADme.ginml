@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gxl SYSTEM "http://ginsim.org/GINML_2_2.dtd">
+<gxl xmlns:xlink="http://www.w3.org/1999/xlink">
+	<graph id="phage4" class="regulatory" nodeorder="p q r">
+		<nodestyle background="#ffffff" foreground="#000000" text="#000000" shape="RECTANGLE" width="45" height="25" properties="intermediate:#ffff00 active:#ffc800"/>
+		<edgestyle color="#000000" pattern="SIMPLE" line_width="1" properties="positive:#00c800 negative:#c80000 dual:#0000c8"/>
+
+		<node id="p" maxvalue="1">
+			<parameter idActiveInteractions=" p:q" val="1"/>
+			<nodevisualsetting x="124" y="565" style=""/>
+		</node>
+
+		<node id="q" maxvalue="1">
+			<parameter idActiveInteractions=" q:p" val="1"/>
+			<parameter idActiveInteractions=" q:r" val="1"/>
+			<value val="1">
+				<exp str="p &amp; r"/>
+			</value>
+			<nodevisualsetting x="202" y="316" style=""/>
+		</node>
+
+		<node id="r" maxvalue="1">
+			<parameter idActiveInteractions=" r:p" val="1"/>
+			<nodevisualsetting x="369" y="272" style=""/>
+		</node>
+
+		<edge id="p:q" from="p" to="q" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="q:p" from="q" to="p" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="q:r" from="q" to="r" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:p" from="r" to="p" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+
+	</graph>
+</gxl>
