@@ -138,3 +138,4 @@ L'implémentation pour ce format supporte aussi bien les variables booléennes q
 * **Folschette, M., et al. (2015)**. *Inference of Boolean networks from time series of gene expression*. [PDF](http://maxime.folschette.fr/Folschette_TCS15.pdf)
 * **Ribeiro, T., et al. (2021)**. *Learning Logic Programs for Modeling Gene Regulatory Networks*. [PDF](http://maxime.folschette.fr/Ribeiro_ML21.pdf)
 * **Richard, A., Comet, J.-P., & Bernot, G. (2008)**. *Formal Methods for Modeling Biological Regulatory Networks*. [Notes de cours (Lille)](https://webusers.i3s.unice.fr/~bernot/Teaching/2008-LilleSchool-RichardCometBernot.pdf)
+* **CHEVRON Guillaume, FIGUEIREDO BORRMANN Yuri, HAMILA Fatma, JUNG-MULLER Mathieu, SCHIEFFER Gabin (2021)**. *Vérification de propriétés dynamiques de modèles inférés par LFIT à l’aide de la bibliothèque CoLoMoTo*. [Rapport](2021.03.30–RapportfinalCoLoMoTov2-2.pdf)
