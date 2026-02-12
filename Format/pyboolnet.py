@@ -1,4 +1,4 @@
-def modelToPyboolnet(model, outputFile = "./output"):
+def modelToPyboolnet(model, outputFile = "pyboolnet"):
     variable = [i[0][:-2] for i in  model.targets]
     rules = model.rules
     with open(f"{outputFile}.bnet", "w") as f:

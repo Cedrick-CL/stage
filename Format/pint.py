@@ -1,4 +1,4 @@
-def modelToPint(model, outputName = "./pintfile"):
+def modelToPint(model, outputName = "pint"):
     with open(f"{outputName}.an", "w") as f:
         for features in model.features:
             f.write(f'"{features[0][:-4]}" {features[1]}\n')

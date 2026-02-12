@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gxl SYSTEM "http://ginsim.org/GINML_2_2.dtd">
+<gxl xmlns:xlink="http://www.w3.org/1999/xlink">
+	<graph id="phage4" class="regulatory" nodeorder="p q r s">
+		<nodestyle background="#ffffff" foreground="#000000" text="#000000" shape="RECTANGLE" width="45" height="25" properties="intermediate:#ffff00 active:#ffc800"/>
+		<edgestyle color="#000000" pattern="SIMPLE" line_width="1" properties="positive:#00c800 negative:#c80000 dual:#0000c8"/>
+
+		<node id="p" maxvalue="2">
+			<parameter idActiveInteractions=" p:p" val="1"/>
+			<parameter idActiveInteractions=" p:r" val="1"/>
+			<parameter idActiveInteractions=" p:q" val="1"/>
+			<value val="1">
+				<exp str="p"/>
+				<exp str="p &amp; !r &amp; q"/>
+				<exp str="!p &amp; r"/>
+				<exp str="p &amp; q &amp; !r"/>
+				<exp str="p &amp; q &amp; !r"/>
+				<exp str="!q &amp; !p"/>
+			</value>
+			<nodevisualsetting x="463" y="178" style=""/>
+		</node>
+
+		<node id="q" maxvalue="3">
+			<parameter idActiveInteractions=" q:p" val="1"/>
+			<parameter idActiveInteractions=" q:q" val="1"/>
+			<value val="1">
+				<exp str="p &amp; !q"/>
+				<exp str="q"/>
+				<exp str="q &amp; p"/>
+				<exp str="!p &amp; !q"/>
+			</value>
+			<nodevisualsetting x="362" y="432" style=""/>
+		</node>
+
+		<node id="r" maxvalue="1">
+			<parameter idActiveInteractions=" r:p" val="1"/>
+			<parameter idActiveInteractions=" r:s" val="1"/>
+			<parameter idActiveInteractions=" r:q" val="1"/>
+			<parameter idActiveInteractions=" r:r" val="1"/>
+			<value val="1">
+				<exp str="p &amp; s &amp; !q"/>
+				<exp str="q &amp; r"/>
+				<exp str="!p &amp; r"/>
+				<exp str="s &amp; !p &amp; q"/>
+				<exp str="r &amp; s"/>
+				<exp str="p &amp; q &amp; s"/>
+				<exp str="p &amp; q &amp; s"/>
+				<exp str="p &amp; r"/>
+				<exp str="r &amp; q"/>
+				<exp str="!q &amp; !p &amp; s"/>
+				<exp str="q &amp; r"/>
+				<exp str="q &amp; s &amp; !p"/>
+			</value>
+			<nodevisualsetting x="448" y="289" style=""/>
+		</node>
+
+		<node id="s" maxvalue="1">
+			<parameter idActiveInteractions=" s:s" val="1"/>
+			<parameter idActiveInteractions=" s:p" val="1"/>
+			<parameter idActiveInteractions=" s:q" val="1"/>
+			<parameter idActiveInteractions=" s:r" val="1"/>
+			<value val="1">
+				<exp str="s &amp; p"/>
+				<exp str="q &amp; s"/>
+				<exp str="r &amp; s"/>
+				<exp str="!p &amp; q"/>
+				<exp str="q &amp; s"/>
+				<exp str="!p &amp; !q"/>
+				<exp str="s &amp; q"/>
+			</value>
+			<nodevisualsetting x="109" y="321" style=""/>
+		</node>
+
+		<edge id="p:p" from="p" to="p" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="p:r" from="p" to="r" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="p:q" from="p" to="q" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="p:p" from="p" to="p" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="p:r" from="p" to="r" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="p:r" from="p" to="r" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="p:r" from="p" to="r" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="p:q" from="p" to="q" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="p:p" from="p" to="p" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="q:p" from="q" to="p" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="q:q" from="q" to="q" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="q:q" from="q" to="q" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="q:p" from="q" to="p" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="q:q" from="q" to="q" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:p" from="r" to="p" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:s" from="r" to="s" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:q" from="r" to="q" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:q" from="r" to="q" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:r" from="r" to="r" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:p" from="r" to="p" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:p" from="r" to="p" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:q" from="r" to="q" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:p" from="r" to="p" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="r:p" from="r" to="p" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="s:s" from="s" to="s" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="s:p" from="s" to="p" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="s:q" from="s" to="q" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="s:r" from="s" to="r" sign="positive">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="s:p" from="s" to="p" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="s:p" from="s" to="p" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+		<edge id="s:q" from="s" to="q" sign="negative">
+			<edgevisualsetting anchor="NE" style=""/>
+		</edge>
+
+	</graph>
+</gxl>

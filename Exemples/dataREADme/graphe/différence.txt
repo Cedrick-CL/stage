@@ -1,0 +1,7 @@
+Arêtes présentes uniquement dans ginml1.dot :
+100 -> 101
+110 -> 111
+
+Arêtes présentes uniquement dans bnet.dot et sbmlquad.dot:
+101 -> 100
+111 -> 110

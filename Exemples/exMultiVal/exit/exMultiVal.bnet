@@ -1,0 +1,4 @@
+p, p | (p & !r & q) | (!p & r) | (p & q & !r) | (p & q & !r) | (!q & !p)
+q, (p & !q) | q | (q & p) | (!p & !q)
+r, (p & s & !q) | (q & r) | (!p & r) | (s & !p & q) | (r & s) | (p & q & s) | (p & q & s) | (p & r) | (r & q) | (!q & !p & s) | (q & r) | (q & s & !p)
+s, (s & p) | (q & s) | (r & s) | (!p & q) | (q & s) | (!p & !q) | (s & q)
