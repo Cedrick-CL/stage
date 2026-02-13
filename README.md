@@ -93,7 +93,7 @@ L'implémentation pour ce format supporte aussi bien les variables booléennes q
 
 Ce format de traduction a posé plus de problèmes, notamment concernant la syntaxe des fichiers concernés. 
 
-Pour éviter d'écrire des bêtises, je ne détaillerai pas plus ce qui a été fait. Si vous souhaitez voir les détails, le code est disponible dans le fichier `.py` associé dans le dossier `Format`, et des exemples de sorties sont trouvables dans le dossier `Exemples`. Il est tout à fait possible d'ouvrir le fichier de sorti avec Ginsim, mais des incompréhension persistent en ce qui concerne les conditions d'activation (les règles and notamment), ce qui fait qu'en sortie, on n'obtient pas tout à fait le même graphe (pour plus de détails, voir le notebook `rendu.ipynb`).
+Pour éviter d'écrire des bêtises, je ne détaillerai pas plus ce qui a été fait. Si vous souhaitez voir les détails, le code est disponible dans le fichier `.py` associé dans le dossier `Format`, et des exemples de sorties sont trouvables dans le dossier `Exemples`. Il est tout à fait possible d'ouvrir le fichier de sorti avec Ginsim, mais des incompréhension persistent en ce qui concerne les conditions d'activation (les règles and notamment), ce qui fait qu'en sortie, on n'obtient pas tout à fait le même graphe que pour les autres formats (pour plus de détails, voir le notebook `rendu.ipynb`).
 
 **Limites de l'implémentation :**
 * L'algorithme de traduction n'est efficace que pour les variables **booléennes**. 
